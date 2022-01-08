@@ -1,0 +1,20 @@
+<div class="main">
+    <form [formGroup]="form" class="form">
+
+        <div class="title">{{title}}</div>
+        <div class="content">
+            <div *ngFor="let question of questions" class="form-row">
+                <app-form-template [question]="question" [form]="form" (newFileEvent)=fileEvent($event)></app-form-template>
+            </div>
+
+            <div class="form-row">
+                <div class="btn6" (click) = "onSubmit()">Save</div>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- <div *ngIf="payLoad" class="form-row">
+        <strong>Saved the following values</strong><br>{{payLoad}}
+    </div> -->
+</div>

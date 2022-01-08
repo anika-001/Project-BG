@@ -1,0 +1,107 @@
+.main
+{
+  width: 100vw;
+  padding-top: 10vh;
+  height: 100vh;
+  background-color: #c8e8ea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cont
+{   
+  height: 70vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.adjust3
+{
+  height:4vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2vw;
+
+}
+
+.doc{
+  height:3em;
+  font-size:3vh;
+  font-weight: 700;
+}
+.price
+{
+  font-size:3vh;
+  font-weight: 700;
+}
+.adjust1
+{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+.slottitle{
+  font-size:3vh;
+  font-weight:600;
+  width: 100%;
+  text-align: center;
+ 
+  
+}
+
+.adjust
+{
+  height:80vh;
+  width: 100%;
+  margin: 0 5%;
+  overflow-y: scroll;
+}
+.row1
+{
+  
+ height:6vh;
+ width:100%;
+ margin: 2vh 0vh;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+}
+
+.column1
+{
+  height: 6vh;
+  width: 25%;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.btn6
+{
+  width: 50%;
+  text-align: center;
+}
+
+.arrow{
+  justify-content: flex-end;
+  margin: 1vh 0;
+}
+
+.a{
+  font-size: 150%;
+  cursor: pointer;
+  margin: 0 1vw;
+}
+
+.a:hover{
+  color: white;
+}

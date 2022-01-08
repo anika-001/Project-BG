@@ -1,0 +1,163 @@
+:host{ ::ng-deep{ .sr-only{display:none;}}}
+.main
+{
+    height:100vh;
+    width: 100vw;
+    padding-top: 10vh;
+    background-color: #c8e8ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    height:5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.title2{
+    width: 75%;
+}
+
+.btn {
+    width: 25%;
+}
+.btn6{
+    width: 50%;
+        
+}
+.box {
+    height: 85vh;
+    width: 45%;
+    overflow-y: scroll;
+}
+.column1 {
+    height: 12vh;
+    width: 100%;
+    margin: 2vh 0vh;
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid thin rgba(0, 0, 0, 0.822);
+}
+.log{
+    
+    height: 10vh; 
+    width: 15% ;
+}
+
+.log img{
+  width: 100%;
+  height: 100%;
+}
+.pic{
+    height: 10vh;
+    align-items: center;
+    margin-top: 4vh;
+    width: 100%;
+}
+
+.box2{
+    height: 10vh;
+    width: 100%;
+
+}
+
+.box3{
+    height: 7vh;
+}
+
+.box4{
+    height: 3vh;
+    width: 30%;
+    align-items: center;
+}
+.box5{
+    height: 2vh;
+    width: 30%;
+    align-items: center;
+}
+
+.adjust{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.r1{
+    height: 5vh;
+    font-size: 150%;
+  }
+  
+  .rating{
+    width: 15vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.comment1{
+    margin-top: -2vh;
+    height:9vh;
+    font-size:15px;
+    font-weight: 600;
+}
+
+ngb-rating {
+    
+   color: #9378FF;
+}
+
+//rating
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  color: #9378FF;
+}
+
+.star1 {
+  position: relative;
+  display: inline-block;
+  font-size: 150%;
+  color: #d3d3d3;
+}
+
+.full {
+  color: #9378FF;
+}
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+
+  color: #9378FF;
+}
+  //rating
+  .star {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    color: #9378FF;
+  }
+  
+  .star1 {
+    position: relative;
+    display: inline-block;
+    font-size: 150%;
+    color: #d3d3d3;
+  }
+  
+  .full {
+    color: #9378FF;
+  }
+  .half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: #9378FF;
+  }

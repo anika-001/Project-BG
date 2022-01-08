@@ -1,0 +1,25 @@
+<p>reminderslot works!</p>
+
+<div class="main">
+    <div class="adjust3">
+        <div class="doc">Reminders</div>
+        <div class="btn6" (click)= "gotoaddremind()">Add Reminders</div>
+
+    </div> 
+    <div class="cont">
+        <div class="adjust1">
+         
+            <div class="slottitle" *ngFor="let info of info">{{info}}</div>
+        </div>
+        <div class="adjust">
+            <div class="row1" *ngFor="let x of remind; let i=index">
+                <div class="column1">{{x.payload.doc.data().MedicineName}}</div>
+                <div class="column2">{{x.payload.doc.data().Time}}</div>
+                
+            
+            </div>
+        </div>
+
+    </div>
+</div>
+

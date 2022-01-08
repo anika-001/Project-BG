@@ -1,0 +1,104 @@
+<ng-template #t let-fill="fill">
+    <span class="star1" [class.full]="fill === 100">
+        <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+    </span>
+</ng-template>
+<div class="main">
+    <div>
+        <a href="http://wa.me/+14155238886?text=join%20larger-nuts" style="text-decoration:none">
+            <button type="button" class="btn btn-outline-success wsspbtn">Click here to chat with us on Whatsapp! For
+                messaging consent, kindly send the initial message.</button>
+        </a>
+        <div class="div wsspbtn">Alternatively copy this link by clicking here, and message on whatsapp to continue
+            further!
+            <button (click)="copyMessage('http://wa.me/+14155238886?text=join%20larger-nuts')" value="click to copy"
+                class="btn btn-outline-success" style="margin-left: 1vw;">Click here</button>
+        </div>
+    </div>
+    <div class="appointment">
+
+        <div class="past">
+            <div class="oldt">PAST APPOINTMENTS</div>
+            <div class="oldb"> 
+            <div class="rect" *ngIf = "meetings.length"> 
+                <div class="inputs" *ngFor = "let x of meetings; let i = index"><div *ngIf = "!(i >= 5) && isbefore(x.time)">Meeting with <b>{{x.name}}</b> has been set for <b>{{toIst(x.time)}} </b> <a href = "{{x.link}}">Click here to go to meet</a></div></div>
+            </div>
+            </div>
+        </div>
+        <div class="between"></div>
+        <div class="upcoming">
+            <div class="oldt">UPCOMING APPOINTMENTS</div>
+            <div class="oldb">
+                <div class="rect" *ngIf = "meetings.length"> 
+                    <div class="inputs" *ngFor = "let x of meetings; let i = index"><div *ngIf = "!(i >= 5) && !isbefore(x.time)">Meeting with <b>{{x.name}}</b> has been set for <b>{{toIst(x.time)}} </b> <a href = "{{x.link}}">Click here to go to meet</a></div></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="family">
+
+        <div class="above"> MY FAMILY</div>
+        <div class="top" style="justify-content: flex-end;">
+            <div class="show" routerLink="/family"> SHOW ALL &rarr;</div>
+        </div>
+        <div class="below">
+            <div *ngFor="let i of family; let x = index ">
+                <div class="members" *ngIf="!(x >= 4)">
+                    <div class="pic">
+                        <img class="image" src="{{getpicture(x)}}">
+                    </div>
+                    <div class="info">
+                        <div>Name: {{family[x].payload.doc.data().FamilyMemberName}}</div>
+                        <div>Relation: {{family[x].payload.doc.data().Relation}}</div>
+                        <div>Age: {{family[x].payload.doc.data().FamilyMemberAge}} Years</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="medication">
+        <div class="top">MEDICATION</div>
+        <div class="show1" routerLink="/meddelivery"> SHOW ALL &rarr;</div>
+        <div class="bottom" *ngIf="meddel.length">
+            <div class="medicine" *ngFor="let x of [0, 1, 2, 3] ">
+                <div class="types">
+                    <img class="image"
+                        src="https://firebasestorage.googleapis.com/v0/b/bridging-gaps-677a5.appspot.com/o/Assets%2FMedicines%2FMedicines.png?alt=media&token=540a7eac-d90d-4b35-ae42-404cbf98eb69">
+                </div>
+                <div class="details">
+                    <div>Name: {{meddel[x].payload.doc.data().Name}}</div>
+                    <ngb-rating [max]="5" [(rate)]="meddel[x].payload.doc.data().Rating" [readonly]="true"
+                        [starTemplate]="t">
+                    </ngb-rating>
+                    <a href="{{meddel[x].payload.doc.data().Link}}" style="color: blue; font-size: 10px;"> Visit
+                        Here</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="test">
+        <div class="top2">
+            <div class="top1">LABTEST</div>
+            <div class="show" routerLink="/lab"> SHOW ALL &rarr;</div>
+        </div>
+        <div class="bottom" *ngIf="labtest.length">
+            <div class="card" *ngFor="let x of [0, 1, 2, 3] ">
+                <div class="logo">
+                    <img class="image"
+                        src="https://firebasestorage.googleapis.com/v0/b/bridging-gaps-677a5.appspot.com/o/Assets%2FLab%20Test%2FLabTest.png?alt=media&token=1c9f8e98-b5bf-4f6f-a12c-dbb2dde0e973">
+                </div>
+                <div class="details">
+                    <div>Name: {{labtest[x].payload.doc.data().Name}}</div>
+                    <ngb-rating [max]="5" [(rate)]="labtest[x].payload.doc.data().Rating" [readonly]="true"
+                        [starTemplate]="t">
+                    </ngb-rating>
+                    <a href="{{labtest[x].payload.doc.data().Link}}" style="color: blue; font-size: 10px;"> Visit
+                        Here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

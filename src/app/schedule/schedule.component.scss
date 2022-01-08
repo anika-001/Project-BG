@@ -1,0 +1,279 @@
+.main
+{
+    height: 100vh;
+    padding-top: 10vh;
+    width: 100vw;
+    background-color:#c8e8ea;
+    display: flex;
+    flex-direction: row;
+}
+
+.monthlycal
+{
+    height: 90vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calendar
+{
+    height: 50vh;
+    background-color: #C8E8EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cal
+{
+    height: 48vh;
+    width: 80%;
+    background-color: white;
+    border-radius:20px;
+    align-items: center;
+    
+}
+
+.month
+{
+    height:5vh ;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+}
+
+.year
+{
+    width: 100%;
+    padding-left: 2vh;
+    font-size:120%;
+    font-weight: bold;
+}
+.arrow
+{
+    cursor: pointer;
+    display: flex;
+}
+.arrow1
+{
+    font-size:2em;
+    margin-top:-2vh;
+}
+.arrow2
+{
+    font-size:2em;
+    margin-top:-2vh;
+}
+.align
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.name
+{
+    height:5vh;
+    width:100%;
+    font-weight: 700;  
+}
+
+.grid{
+    width:100%;
+    font-size: 100%;
+    font-weight: 600;
+}
+
+.five
+{
+   height: 3vh;
+   width: 100%;
+   margin: 3vh 0vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+.seven
+{
+    height: 3vh;
+    width: 10%;
+    align-items: center;
+    cursor: pointer;
+}
+.mark{
+   border-radius : 50%;
+   height :4vh;
+   width : 4vh;
+   background-color: lightcoral;
+}
+.meetinfo
+{
+    height: 20vh;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.weeklycal
+{
+    height: 90vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.sub
+{
+    height:20vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.title
+{
+    height:10vh;
+    width: 100%;
+}
+.al
+{
+    display: flex;
+    flex-direction: row;
+}
+.adjust
+{
+    width: 15%;
+}
+
+.daysofweek
+{
+    width:84%;
+    display: flex;
+    font-size:80vh;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+}
+.daysname{
+    height:5vh;
+    width: 100%;
+    font-weight:bold;
+     font-size:0.03em;
+    font-weight:700;
+    text-align: center;
+}
+
+.box
+{
+    height:80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.timeslot
+{
+    height:90vh;
+    width: 15%;
+}
+
+.timehour
+{   
+    font-size:120%;
+    font-weight:500;
+    height:5vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.cala{
+  width: 85%;
+}
+.days
+{
+    height: 5vh;
+    width: 100%;
+    font-size:10vh;
+    border-bottom: solid thin silver;
+    border-right: solid thin silver;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+
+.avunav{
+    height:3vh;
+    width: 3vh;
+    border-radius: 50%; 
+    cursor: pointer;
+}
+
+.meettext{
+    font-size: 20%;
+    color: white;
+    cursor: pointer;
+}
+
+  
+ .available
+ {   
+    background-color: green;
+}
+
+.unavailable
+{
+    background-color: rgb(175, 0, 0);   
+}
+.time
+{
+   height: 5vh;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .av{
+      background-color: rgb(134, 241, 134);
+  }
+
+  .unav{
+      background-color: rgb(199, 108, 108);
+  }
+
+  .meet{
+    background-color: rgb(118, 118, 199);
+  }
